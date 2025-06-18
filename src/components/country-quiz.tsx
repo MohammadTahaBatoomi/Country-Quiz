@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const questions = [
@@ -36,11 +37,11 @@ const CountryQuiz: React.FC = () => {
       {/* Quiz Box */}
       <div className="bg-[#343963] rounded-2xl shadow-2xl md:px-12 px-6 py-10 w-full max-w-2xl flex flex-col gap-8">
         {/* Steps */}
-        <div className="flex justify-center md:gap-2 gap-1 mb-2">
+        <div className="flex justify-center md:gap-2 gap-1.5 mb-2">
           {[...Array(10)].map((_, i) => (
             <button
               key={i}
-              className={`md:w-12 md:h-12 w-9 h-8 rounded-full flex items-center justify-center text-lg font-bold transition-all duration-500 ${
+              className={`md:w-12 md:h-12 w-9 h-7 rounded-full flex items-center justify-center text-lg font-bold transition-all duration-500 ${
                 i === current - 1
                   ? "bg-gradient-to-r from-pink-400 to-purple-400 shadow-lg"
                   : i < current - 1
@@ -65,7 +66,7 @@ const CountryQuiz: React.FC = () => {
         </div>
 
         {/* Answers */}
-        <div className="grid grid-cols-2 md:gap-5 gap-3">
+        <div className="grid md:grid-cols-2 gap-3 md:gap-5">
           {q.options.map((opt, idx) => {
             let btnClass =
               "py-4 rounded-xl text-lg font-semibold flex items-center justify-center transition-all duration-500 relative ";
@@ -76,16 +77,18 @@ const CountryQuiz: React.FC = () => {
                 btnClass +=
                   "bg-gradient-to-r from-pink-400 to-purple-400 text-white";
                 icon = (
-                  <img
+                  <Image
                     src="images/resources/Close_round_fill.svg"
+                    alt=""
                     className="pl-2"
                   />
                 );
               } else if (idx === q.answer) {
                 btnClass += "bg-[#393f6f] text-blue-200";
                 icon = (
-                  <img
+                  <Image
                     src="images/resources/Check_round_fill.svg"
+                    alt=""
                     className="pl-2"
                   />
                 );
@@ -95,7 +98,7 @@ const CountryQuiz: React.FC = () => {
               }
             } else {
               btnClass +=
-                "bg-[#393f6f] border border-[#3b3f5c] text-[#b8b8d1] hover:bg-gradient-to-r hover:from-pink-400 hover:to-purple-400 hover:text-white";
+                "bg-[#393f6f] border border-[#3b3f5c] text-[#b8b8d1] hover:bg-gradient-to-r hover:from-pink-400 hover:to-purple-400 hover:text-white transition-all duration-1000";
             }
 
             return (

@@ -96,3 +96,73 @@ We value feedback and are always looking to improve our challenges and platform.
 This challenge is completely free. Please share it with anyone who would find it useful for practice.
 
 **Enjoy building!** 🚀# Country-Quiz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////
+<!-- "use client";
+import React, { useEffect, useState } from "react";
+
+interface Country {
+  name: { common: string };
+  flags: { png: string; svg: string };
+}
+
+export default function CountryList() {
+  const [countries, setCountries] = useState<Country[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("https://restcountries.com/v3.1/all?fields=name,flags")
+      .then((res) => res.json())
+      .then((data) => {
+        const firstTen = data.slice(0, 10);
+        setCountries(firstTen);
+        setLoading(false);
+        console.log(firstTen); // این درسته
+      })
+
+      .catch((err) => {
+        console.error("خطا در دریافت داده:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <p className="text-white p-4">در حال بارگذاری...</p>;
+
+  return (
+    <div className="p-6 max-w-3xl mx-auto text-white">
+      <h1 className="text-2xl font-bold mb-4">لیست ۱۰ کشور اول</h1>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {countries.map((country, index) => (
+          <li
+            key={index}
+            className="bg-[#343963] p-4 rounded-xl shadow-lg flex items-center gap-4"
+          >
+            <img
+              src={country.flags.png}
+              alt={`Flag of ${country.name.common}`}
+              className="w-10 h-6 object-cover rounded"
+            />
+            <span>{country.name.common}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+} -->

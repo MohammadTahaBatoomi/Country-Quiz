@@ -37,7 +37,7 @@ const CountryQuiz: React.FC = () => {
       {/* Quiz Box */}
       <div className="bg-[#343963] rounded-2xl shadow-2xl md:px-12 px-6 py-10 w-full max-w-2xl flex flex-col gap-8">
         {/* Steps */}
-        <div className="flex justify-center md:gap-2 gap-1.5 mb-2">
+        <div className="flex justify-center md:gap-2.5 gap-1.5 mb-2">
           {[...Array(10)].map((_, i) => (
             <button
               key={i}
@@ -79,16 +79,20 @@ const CountryQuiz: React.FC = () => {
                 icon = (
                   <Image
                     src="images/resources/Close_round_fill.svg"
+                    width={25}
+                    height={25}
                     alt=""
                     className="pl-2"
                   />
                 );
               } else if (idx === q.answer) {
-                btnClass += "bg-[#393f6f] text-blue-200";
+                btnClass += "bg-[#393f6f] text-blue-400";
                 icon = (
                   <Image
                     src="images/resources/Check_round_fill.svg"
                     alt=""
+                    width={25}
+                    height={25}
                     className="pl-2"
                   />
                 );

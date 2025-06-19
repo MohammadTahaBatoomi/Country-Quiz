@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function congrats() {
@@ -7,7 +8,7 @@ function congrats() {
         <img src="/images/resources/congrats.png" alt="" className="w-[380px]" /> 
         <h1 className="text-[#e1e1eb] text-3xl mx-10 text-center">Congrates! You completed <br /> the quiz.</h1>
         <p className="text-center text-lg">You answer 4/10 correctly</p>
-        <button className="bg-gradient-to-r from-pink-400 to-purple-400 shadow-lg font-medium py-4 px-18 rounded-lg cursor-pointer">Play again</button>
+        <Link href='/' className="bg-gradient-to-r from-pink-400 to-purple-400 shadow-lg font-medium py-4 px-18 rounded-lg cursor-pointer">Play again</Link>
       </div>
     </div>
   );

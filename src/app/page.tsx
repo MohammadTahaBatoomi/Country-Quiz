@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Fragment } from "react";
-import Countryquiz from "@/components/country-quiz";
+import Countryquiz from "@/components/congrats";
 
 export default function Home() {
   return (

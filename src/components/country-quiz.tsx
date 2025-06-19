@@ -4,14 +4,14 @@ import React, { useState } from "react";
 
 const questions = [
   {
-    flag: "🇫🇮",
+    quiz: "Which country does this flag 🇫🇮 belong to?",
     options: ["Sweden", "Vietnam", "Finland", "Austria"],
     answer: 2,
   },
 ];
 
 const CountryQuiz: React.FC = () => {
-  const [current, setCurrent] = useState(1);
+  const [current, setCurrent] = useState(2);
   const [selected, setSelected] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
 
@@ -46,7 +46,7 @@ const CountryQuiz: React.FC = () => {
                   ? "bg-gradient-to-r from-pink-400 to-purple-400 shadow-lg"
                   : i < current - 1
                   ? "bg-pink-200 text-pink-700"
-                  : "bg-[#393f6f] border border-[#3b3f5c] text-[#b8b8d1]"
+                  : "bg-[#393f6f] border border-[#3b3f5c] text-[#b8b8d1] cursor-pointer"
               }`}
             >
               {i + 1}
@@ -57,11 +57,7 @@ const CountryQuiz: React.FC = () => {
         {/* Question */}
         <div className="text-center">
           <h2 className="text-xl font-bold">
-            Which country does this flag{" "}
-            <span className="inline-block align-middle text-3xl mx-1">
-              {q.flag}
-            </span>{" "}
-            belong to?
+            {q.quiz}
           </h2>
         </div>
 

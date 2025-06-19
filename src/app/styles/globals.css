@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  /* --bg-box-blue: #343963;
-  --bg-button-blue: #393f6f;
-  --bg-button-r-pink: linear-gradient(90deg, #f15bb5, #9b5de5);; */
-}
-
 body{
   color: white;
 }

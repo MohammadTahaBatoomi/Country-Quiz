@@ -35,17 +35,6 @@ Challenge yourself with flag recognition, capital cities, country borders, and p
 
 ---
 
-## 🛠 Tech Stack
-
-- **Frontend:** HTML, CSS, Vanilla JavaScript *(no frameworks)*  
-- **Data:** Local JSON files (countries, flags, etc.)  
-- **Storage:** LocalStorage (optional for storing scores)
-
-> *Note: This app was written entirely offline without access to online documentation, resources, or internet.*
-
-
----
-
 # Installation 👨🏻‍💻
 
 > We recommend you use npm

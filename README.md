@@ -46,9 +46,24 @@ Challenge yourself with flag recognition, capital cities, country borders, and p
 
 ---
 
-## 🚀 How to Run
+# Installation 👨🏻‍💻
 
-1. **Download the project ZIP** or clone the repository:
+> We recommend you use npm
 
-```bash
-git clone https://github.com/MohammadTahaBatoomi/Country-Quiz.git
+1. Install all packages
+
+```
+npm i
+```
+
+2. Run Development Server
+
+```
+npm run dev
+```
+
+3. Build your project
+
+```
+npm run build
+```
